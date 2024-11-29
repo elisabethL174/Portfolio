@@ -1,0 +1,179 @@
+/* Sticky Navbar */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #222;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end; /* Membuat menu rata kanan */
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 0;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar ul li a:hover {
+    background-color: #444;
+    color: #ddd;
+}
+
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #111;
+    color: #eee;
+}
+
+.banner {
+    width: 100%;
+    height: auto;
+}
+
+/* About Me Section */
+.about-me {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.profile-pic img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid #444;
+    margin-bottom: 20px;
+}
+
+.description {
+    max-width: 600px;
+    padding: 20px;
+}
+
+.description h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.social-links a img {
+    width: 40px; /* Ukuran ikon */
+    height: 40px;
+    opacity: 0.7; /* Opacity default */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Animasi hover */
+}
+
+.social-links a:hover img {
+    transform: translateY(-5px);
+    opacity: 1;
+}
+
+/* Portfolio Section */
+.portfolio {
+    text-align: center;
+    padding: 30px 20px;
+}
+/* Reset untuk Swiper */
+.swiper-container {
+    width: 100%;
+    max-width: 800px; /* Atur lebar maksimal */
+    margin: 0 auto; /* Posisikan di tengah */
+    padding: 20px 0;
+    position: relative; /* Supaya navigasi terletak di dalam container */
+    overflow: hidden; /* Prevent content from lifting */
+}
+
+/* Swiper Slide with Hover Description */
+/* Swiper Slide with Hover Description */
+.swiper-slide {
+    position: relative; /* Memungkinkan deskripsi berada di atas gambar */
+}
+
+.swiper-slide img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Deskripsi disembunyikan secara default */
+.swiper-slide .description {
+    opacity: 0; /* Transparan secara default */
+    visibility: hidden; /* Tidak terlihat secara visual */
+    position: absolute; /* Posisi relatif terhadap slide */
+    bottom: 10%; /* Posisi vertikal */
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.7); /* Latar belakang semi-transparan */
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    text-align: center;
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Efek transisi */
+}
+
+/* Tampilkan deskripsi saat slide di-hover */
+.swiper-slide:hover .description {
+    opacity: 1; /* Deskripsi terlihat */
+    visibility: visible; /* Ditampilkan secara visual */
+}
+
+
+
+.swiper-container .swiper-button-next,
+.swiper-container .swiper-button-prev {
+    color: white;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-button-next {
+    right: 10px; /* Tempatkan di sisi kanan */
+}
+
+.swiper-button-prev {
+    left: 10px; /* Tempatkan di sisi kiri */
+}
+
+.swiper-wrapper {
+    display: flex; /* Pastikan elemen slide tersusun sejajar */
+    align-items: center;
+    width: 100%; /* Pastikan tidak ada elemen yang keluar dari container */
+}
+
+.swiper-pagination-bullet {
+    background-color: #fff !important;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #fff !important;
+}
